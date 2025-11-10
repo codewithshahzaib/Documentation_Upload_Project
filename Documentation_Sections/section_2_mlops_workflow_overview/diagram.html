@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLOps Workflow Pipeline</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    .diagram-container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 1200px;
+      width: 100%;
+    }
+    .diagram-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 15px;
+    }
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .node {
+      position: relative;
+      padding: 16px 32px;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      min-width: 200px;
+      transition: transform 0.2s;
+    }
+    .node:hover {
+      transform: scale(1.05);
+    }
+    .node-start, .node-end {
+      background: linear-gradient(135deg, #48bb78, #38a169);
+      border-radius: 50px;
+    }
+    .node-process {
+      background: linear-gradient(135deg, #4299e1, #3182ce);
+      border-radius: 8px;
+    }
+    .node-decision {
+      background: linear-gradient(135deg, #f6ad55, #ed8936);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      width: 220px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 20px solid #cbd5e0;
+      margin: -5px auto;
+    }
+    .edge-label {
+      font-size: 12px;
+      color: #718096;
+      font-weight: 600;
+      text-align: center;
+      margin: -10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <div class="diagram-title">MLOps Workflow Pipeline</div>
+    <div class="flowchart">
+      <div class="node node-start">
+        <div>Start MLOps Pipeline</div>
+      </div><div class="arrow"></div>
+      <div class="node node-process">
+        <div>Data Ingestion & Validation</div>
+      </div><div class="arrow"></div>
+      <div class="node node-process">
+        <div>Data Preparation & Feature Engineering</div>
+      </div><div class="arrow"></div>
+      <div class="node node-process">
+        <div>Model Training & Validation</div>
+      </div><div class="arrow"></div>
+      <div class="node node-process">
+        <div>Model Deployment & Release</div>
+      </div><div class="arrow"></div>
+      <div class="node node-process">
+        <div>Model Monitoring & Drift Detection</div>
+      </div><div class="arrow"></div>
+      <div class="node node-end">
+        <div>End Pipeline</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
