@@ -1,0 +1,28 @@
+## 2. MLOps Workflow
+
+The MLOps workflow is a foundational pillar in the architecture of an enterprise AI/ML platform, orchestrating the end-to-end process from data ingestion to model deployment and ongoing monitoring. Effective MLOps practices facilitate reproducibility, governance, scalability, and rapid iteration of machine learning models to meet evolving business needs. This section details the pipeline stages, including data preparation, model training, CI/CD for machine learning, and deployment strategies, highlighting best practices for operational efficiency and compliance.
+
+### 2.1 Data Preparation and Feature Engineering
+
+Data preparation forms the cornerstone of the MLOps pipeline, ensuring high-quality, clean, and relevant inputs for model training. It encompasses data ingestion from heterogeneous sources, cleansing, transformation, normalization, and feature engineering using scalable data pipeline architectures. Feature stores play a critical role here by providing centralized, reusable, and version-controlled feature datasets that support both training and real-time inference consistency. Enterprise-grade platforms integrate orchestration tools, such as Apache Airflow or Kubeflow Pipelines, to automate these workflows efficiently while maintaining traceability and lineage essential for auditability and compliance.
+
+### 2.2 Model Training Infrastructure and CI/CD for ML
+
+Model training infrastructure leverages containerized environments with GPU acceleration optimized for large-scale distributed training, supporting frameworks like TensorFlow and PyTorch. Elastic compute provisioning combined with orchestration platforms such as Kubernetes ensures efficient resource utilization and scalability. Continuous Integration and Continuous Deployment (CI/CD) pipelines for ML extend DevSecOps principles by incorporating model validation stages, automated testing on holdout datasets, bias detection, and performance benchmarking before models are promoted. Model versioning is managed using tools like MLflow or DVC, enabling traceability and rollback capabilities vital for enterprise governance.
+
+### 2.3 Deployment Strategies and Model Promotion
+
+Deploying models into production must balance agility with reliability. Blue-green and canary deployment approaches allow seamless model promotion with minimal downtime and rollback capabilities. Inference serving infrastructure is designed for both GPU optimization for latency-sensitive and high-throughput predictions and CPU-optimized deployments suitable for SMB client environments to reduce cost and complexity. Integration with Kubernetes-native model serving platforms (e.g., KServe) enhances autoscaling, monitoring, and fault tolerance. Model promotion policies enforce strict testing, security scanning of model artifacts, and compliance checks, particularly relevant for data governance under UAE regulations.
+
+**Key Considerations:**
+- **Security:** Protecting model artifacts and training data with encryption at rest and in transit is essential, implementing role-based access control (RBAC) and adhering to Zero Trust principles reduces risk of insider threats or data leakage.
+- **Scalability:** The MLOps platform must scale horizontally, supporting large enterprise workloads with numerous concurrent model trainings and deployments, while also providing streamlined, cost-effective solutions for SMB deployments with resource-constrained inference.
+- **Compliance:** Ensuring compliance with UAE data residency laws and privacy frameworks requires that data pipelines, feature stores, and model serving infrastructures maintain regional data sovereignty and support audit trails for regulatory authorities.
+- **Integration:** The workflow needs to seamlessly integrate with existing enterprise CI/CD systems, data lakes, feature stores, monitoring solutions, and ITSM tools to enhance interoperability and operational excellence.
+
+**Best Practices:**
+- Implement incremental data and model versioning to support reproducibility and rollback.
+- Automate model quality checks including bias, fairness, and concept drift detection within pipelines.
+- Utilize infrastructure as code and declarative security policies to enforce consistency and governance.
+
+> **Note:** Selecting flexible and extensible tooling aligned to enterprise architecture frameworks like TOGAF and adopting DevSecOps culture ensures long-term maintainability and risk mitigation in MLOps implementations.
