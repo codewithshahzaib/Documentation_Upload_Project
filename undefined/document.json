@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "documentTitle": "Technical Documentation",
+    "documentType": "Technical Document",
+    "targetAudience": "Technical Team",
+    "totalSections": 8,
+    "completeTOC": null,
+    "github": {},
+    "createdAt": "2025-11-12T15:38:49.664Z",
+    "version": 1
+  },
+  "sections": {
+    "Unknown": {
+      "title": "Untitled Section",
+      "content": "",
+      "diagramData": {
+        "hasDiagram": false
+      },
+      "diagramHtmlUrl": null,
+      "diagramImageUrl": null,
+      "lastModified": "2025-11-12T15:38:49.664Z"
+    }
+  }
+}
